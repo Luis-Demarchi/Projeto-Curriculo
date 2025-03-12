@@ -81,6 +81,12 @@ nav {
         display: block;
         margin-left: 150px;
     }
+    
+    .container{
+        display: flex;
+        border-top: 30px solid rgb(103, 103, 103);
+        border-bottom: 30px solid rgb(103, 103, 103);
+    }
 }
 
 .nav-list.active{
