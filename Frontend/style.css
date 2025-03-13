@@ -84,8 +84,67 @@ nav {
     
     .container{
         display: flex;
-        border-top: 30px solid rgb(103, 103, 103);
-        border-bottom: 30px solid rgb(103, 103, 103);
+        border-top: 20px solid rgb(103, 103, 103);
+        border-bottom: 20px solid rgb(103, 103, 103);
+    }
+
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .typed-text {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        width: 0;
+        overflow: hidden;
+        color: black;
+        white-space: nowrap;
+        box-shadow: 0.1rem 0 0 black; /* A barra de digitação */
+        animation: write 3s steps(22, end) forwards, hideCursor 0s 5s forwards;
+    }
+    
+    @keyframes write {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 17.5ch;
+        }
+    }
+    
+    @keyframes hideCursor {
+        0% {
+            box-shadow: 0.1rem 0 0 black; /* A barra de digitação ainda visível */
+        }
+        100% {
+            box-shadow: none; /* A barra desaparece após 5 segundos */
+        }
+    }
+
+    .subtitle{
+        font-size: 1.5rem !important;
+        font-weight: 250;
+    }
+
+    .text{
+        font-size: 1rem !important;
+        text-indent: 20px !important;
+    }
+}
+
+@media (max-width: 435px){
+    @keyframes write{
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 20.5ch;
+        }
     }
 }
 
@@ -162,4 +221,37 @@ nav {
     width: 100%;
     height: 100%;
     background-color: white;
+}
+
+@media (min-width: 951px){
+    .typed-text {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 0;
+    overflow: hidden;
+    color: black;
+    white-space: nowrap;
+    box-shadow: 0.1rem 0 0 black; /* A barra de digitação */
+    animation: write 3s steps(22, end) forwards, hideCursor 0s 5s forwards;
+}
+
+@keyframes write {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 20.5ch;
+    }
+}
+
+@keyframes hideCursor {
+    0% {
+        box-shadow: 0.1rem 0 0 black; /* A barra de digitação ainda visível */
+    }
+    100% {
+        box-shadow: none; /* A barra desaparece após 5 segundos */
+    }
+}
+
 }
