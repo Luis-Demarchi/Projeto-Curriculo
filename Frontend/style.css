@@ -31,7 +31,7 @@ strong{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: rgb(32, 32, 32);
     box-shadow: 0px 10px 15px rgb(32, 32, 32);
-    height: 9vh;
+    height: 10%;
     width: 100%;
     z-index: 1000;
     position: fixed;
@@ -105,7 +105,8 @@ strong{
     /* About Me page */
 
     .pageAboutMe{
-        padding-top: 40% !important;
+        padding-top: 28% !important;
+        padding-bottom: 28% !important;
         height: 80% !important;
     }
 
@@ -163,7 +164,7 @@ strong{
 
     .pageExperiences{
         padding-top: 10% !important;
-        height: 250% !important;
+        padding-bottom: 10% !important;
     }
 
     .contentExperiences{
@@ -176,6 +177,18 @@ strong{
     .experiencesTitle{
         text-align: center;
         margin-left: 0 !important;
+    }
+
+    .descriptionLine2{
+        margin-top: 5% !important;
+    }
+
+    .containersExperiences li::before{
+        top: 0.9rem !important;
+    }
+
+    .contentContainersExperiences ul::before{
+        height: 53% !important;
     }
 }
 
@@ -211,13 +224,14 @@ strong{
 /* About Me Page */
 
 .pageAboutMe {
-    scroll-margin-top: 9vh;
     width: 100%;
     height: 70%;
     background-color: gray;
-    padding-top: 12%;
+    padding-top: 10%;
     padding-bottom: 5%;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .contentAboutMe{
@@ -315,7 +329,6 @@ strong{
 .pageExperiences{
     scroll-margin-top: 9vh;
     width: 100%;
-    height: 100%;
     background-color: rgb(140, 140, 140);
     padding-top: 5%;
     padding-bottom: 5%;
@@ -401,4 +414,47 @@ strong{
     padding-bottom: 0.25rem;
     font-size: 1rem;
     font-weight: 300;
+}
+
+.textContainerUpgrader{
+    padding-left: 1.5rem;
+}
+
+.contentContainersExperiences ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.contentContainersExperiences ul::before{
+    content: "";
+    position: absolute;
+    height: 55%;
+    top: 15px;
+    bottom: unset;
+    left: 6px;
+    width: 2px;
+    background-color: black;
+}
+
+.containersExperiences li{
+    position: relative;
+}
+
+.containersExperiences li::before{
+    content: "";
+    position: absolute;
+    top: 1.2rem;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.descriptionLine2{
+    font-weight: 300;
+    margin-top: 1%;
 }
