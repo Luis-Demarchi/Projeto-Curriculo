@@ -40,3 +40,29 @@ const MobileNavbarInstance = new MobileNavbar(
     ".nav-list li",
 );
 MobileNavbarInstance.init();
+
+function openImage(imageSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+
+    if (!modal || !modalImg) {
+        console.error("Erro: Modal ou Imagem não encontrados!");
+        return;
+    }
+
+    modal.style.display = "flex";
+    modalImg.src = imageSrc;
+}
+
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+
+document.getElementById("imageModal").addEventListener("click", function (e) {
+    if (e.target === this) closeImage();
+});
+
+window.onload = function () {
+    document.getElementById("imageModal").style.display = "none";
+};

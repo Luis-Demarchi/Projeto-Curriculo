@@ -164,7 +164,7 @@ strong{
 
     .pageExperiences{
         padding-top: 10% !important;
-        padding-bottom: 10% !important;
+        padding-bottom: 25% !important;
     }
 
     .contentExperiences{
@@ -189,6 +189,25 @@ strong{
 
     .contentContainersExperiences ul::before{
         height: 53% !important;
+    }
+
+    /* Projects page */
+
+    .pageProjects{
+        padding-top: 10% !important;
+        padding-bottom: 25% !important;
+    }
+
+    .contentProjects{
+        margin-left: 2% !important;
+        margin-right: 2% !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    .projectsTitle{
+        text-align: center;
+        margin-left: 0 !important;
     }
 }
 
@@ -329,9 +348,9 @@ strong{
 .pageExperiences{
     scroll-margin-top: 9vh;
     width: 100%;
-    background-color: rgb(140, 140, 140);
+    background-color: rgb(160, 160, 160);
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     position: relative;
 }
 
@@ -342,7 +361,7 @@ strong{
     left: 0;
     width: 100%;
     height: 3rem;
-    background: linear-gradient(to bottom, rgba(140, 140, 140, 0), rgb(140, 140, 140));
+    background: linear-gradient(to bottom, rgba(160, 160, 160, 0), rgb(160, 160, 160));
 }
 
 .contentExperiences{
@@ -457,4 +476,104 @@ strong{
 .descriptionLine2{
     font-weight: 300;
     margin-top: 1%;
+}
+
+/* Changing the section to Projects */
+
+.pageProjects{
+    scroll-margin-top: 9vh;
+    width: 100%;
+    background-color: gray;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    position: relative;
+}
+
+.pageProjects::before{
+    content: "";
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(to bottom, rgba(160, 160, 160, 0), gray);
+}
+
+.contentProjects{
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.projectsTitle{
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin-left: 1.4rem;
+}
+
+.containersProjects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contentContainersProjects{
+    border: 1.5px solid rgb(34, 34, 34);
+    background-color: rgb(91, 91, 91);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.contentContainersProjects:hover{
+    box-shadow: 0 10px 20px black;
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projectsImage{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.textContainerProjects{
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent{
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
 }
