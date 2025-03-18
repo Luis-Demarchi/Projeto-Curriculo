@@ -69,6 +69,7 @@ strong{
 /* Mobile configurations */
 
 @media (max-width: 950px){
+
     /* Elements HTML section */
 
     body{
@@ -174,11 +175,6 @@ strong{
         padding-right: 5% !important;
     }
 
-    .experiencesTitle{
-        text-align: center;
-        margin-left: 0 !important;
-    }
-
     .descriptionLine2{
         margin-top: 5% !important;
     }
@@ -205,9 +201,8 @@ strong{
         padding-right: 5% !important;
     }
 
-    .projectsTitle{
-        text-align: center;
-        margin-left: 0 !important;
+    .iconsLinks{
+        margin-top: 0.9rem !important;
     }
 }
 
@@ -348,7 +343,7 @@ strong{
 .pageExperiences{
     scroll-margin-top: 9vh;
     width: 100%;
-    background-color: rgb(160, 160, 160);
+    background-color: rgb(191, 188, 188);
     padding-top: 5%;
     padding-bottom: 10%;
     position: relative;
@@ -361,7 +356,7 @@ strong{
     left: 0;
     width: 100%;
     height: 3rem;
-    background: linear-gradient(to bottom, rgba(160, 160, 160, 0), rgb(160, 160, 160));
+    background: linear-gradient(to bottom, rgba(191, 188, 188, 0), rgb(191, 188, 188));
 }
 
 .contentExperiences{
@@ -375,7 +370,7 @@ strong{
 .experiencesTitle{
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    margin-left: 1.4rem;
+    text-align: center;
 }
 
 .spaceOfContainers{
@@ -483,7 +478,7 @@ strong{
 .pageProjects{
     scroll-margin-top: 9vh;
     width: 100%;
-    background-color: gray;
+    background-color: rgb(160, 160, 160);
     padding-top: 5%;
     padding-bottom: 5%;
     position: relative;
@@ -496,21 +491,21 @@ strong{
     left: 0;
     width: 100%;
     height: 3rem;
-    background: linear-gradient(to bottom, rgba(160, 160, 160, 0), gray);
+    background: linear-gradient(to bottom, rgba(160, 160, 160, 0), rgb(160, 160, 160));
 }
 
 .contentProjects{
-        margin-left: 5%;
-        margin-right: 5%;
-        padding-left: 10%;
-        padding-right: 10%;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 8%;
+        padding-right: 8%;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .projectsTitle{
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    margin-left: 1.4rem;
+    text-align: center;
 }
 
 .containersProjects{
@@ -519,11 +514,12 @@ strong{
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 3rem;
 }
 
 .contentContainersProjects{
     border: 1.5px solid rgb(34, 34, 34);
-    background-color: rgb(91, 91, 91);
+    background-color: rgb(124, 124, 124);
     border-radius: 16px;
     backdrop-filter: blur(5px);
     overflow: hidden;
@@ -576,4 +572,41 @@ strong{
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.descriptionProject{
+    padding-bottom: 0.7rem;
+}
+
+.atributesProjects{
+    border-radius: 10px;
+    background-color: rgb(103, 103, 103);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.iconsLinks {
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.iconsLinks a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: rgb(41, 46, 53);
+}
+
+.iconsLinks a i{
+    font-size: 1.8rem;
+    margin-right: 0.4rem;
+}
+
+.iconsLinks a:hover {
+    color: #1c1c1c;
 }
