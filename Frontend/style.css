@@ -111,7 +111,7 @@ strong{
         height: 80% !important;
     }
 
-    .contentAboutMe{
+    .contentPages{
         margin-left: 2% !important;
         margin-right: 2% !important;
         padding-left: 5% !important;
@@ -168,13 +168,6 @@ strong{
         padding-bottom: 25% !important;
     }
 
-    .contentExperiences{
-        margin-left: 2% !important;
-        margin-right: 2% !important;
-        padding-left: 5% !important;
-        padding-right: 5% !important;
-    }
-
     .descriptionLine2{
         margin-top: 5% !important;
     }
@@ -194,15 +187,15 @@ strong{
         padding-bottom: 25% !important;
     }
 
-    .contentProjects{
-        margin-left: 2% !important;
-        margin-right: 2% !important;
-        padding-left: 5% !important;
-        padding-right: 5% !important;
-    }
-
     .iconsLinks{
         margin-top: 0.9rem !important;
+    }
+
+    /* Education page*/
+
+    .pageEducation{
+        padding-top: 10% !important;
+        padding-bottom: 25% !important;
     }
 }
 
@@ -248,7 +241,7 @@ strong{
     align-items: center;
 }
 
-.contentAboutMe{
+.contentPages{
     margin-left: 5%;
     margin-right: 5%;
     padding-left: 10%;
@@ -359,15 +352,7 @@ strong{
     background: linear-gradient(to bottom, rgba(191, 188, 188, 0), rgb(191, 188, 188));
 }
 
-.contentExperiences{
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.experiencesTitle{
+.titlePages{
     margin-bottom: 2rem;
     font-size: 2.5rem;
     text-align: center;
@@ -494,20 +479,6 @@ strong{
     background: linear-gradient(to bottom, rgba(160, 160, 160, 0), rgb(160, 160, 160));
 }
 
-.contentProjects{
-        margin-left: 3%;
-        margin-right: 3%;
-        padding-left: 8%;
-        padding-right: 8%;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.projectsTitle{
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    text-align: center;
-}
-
 .containersProjects{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -609,4 +580,32 @@ strong{
 
 .iconsLinks a:hover {
     color: #1c1c1c;
+}
+
+/* changing to page education */
+
+.pageEducation{
+    scroll-margin-top: 9vh;
+    width: 100%;
+    background-color: rgb(191, 188, 188);
+    padding-top: 5%;
+    padding-bottom: 7%;
+    position: relative;
+}
+
+.pageEducation::before{
+    content: "";
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(to bottom, rgba(191, 188, 188, 0), rgb(191, 188, 188));
+}
+
+.containersEducation{
+    background-color: rgb(212, 212, 212);
+    border-radius: 20px;
+    border: 1.5px solid rgb(34, 34, 34);
+    margin-bottom: 2.5rem;
 }
