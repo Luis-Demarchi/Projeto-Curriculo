@@ -1,9 +1,9 @@
-require("dotenv").config();
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
@@ -45,16 +45,16 @@ app.post("/send", (req, res) => {
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER,
-            subject: "Novo preenchimento no formulário do seu portifólio !!!!",
+            subject: "Novo preenchimento no formulário do seu portfólio!",
             text: `Nome: ${name}\nE-mail: ${email}\nMensagem: ${message}`
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
-                return res.status(500).json({ message: "Error to sent message!" });
+                return res.status(500).json({ message: "Error to send message!" });
+            } else {
+                return res.status(200).json({ message: "Message sent successfully!" });
             }
-
-            res.json({ message: "Mensage sent successfully!" });
         });
     });
 });

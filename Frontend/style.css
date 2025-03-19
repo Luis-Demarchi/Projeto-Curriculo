@@ -209,6 +209,12 @@ label{
     .pageContact form{
         width: 80% !important;
     }
+
+    /* Notify */
+    .alert {
+        padding: 1rem 1.5rem !important;
+        min-width: 150px !important;
+    }
 }
 
 /* Navbar*/
@@ -693,4 +699,74 @@ label{
 .pageContact form button:hover{
     background: black;
     color: white;
+}
+
+/* Notify */
+
+.alert {
+    padding: 1.5rem 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-width: 320px;
+    position: fixed;
+    right: 0px;
+    top: 15%;
+    border-radius: 4px;
+    border-left: 8px solid;
+    overflow: hidden;
+    display: none;
+    z-index: 9999;
+}
+
+.alert .alertMessage {
+    padding: 0px 1rem;
+    font-size: 1rem;
+}
+
+.alert.error {
+    background: rgb(255, 113, 113);
+    border-left-color: rgb(204, 0, 0);
+}
+
+.alert.success {
+    background: rgb(123, 255, 123);
+    border-left-color: rgb(12, 248, 0);
+}
+
+.alert.show {
+    animation: show_slide 1s ease forwards;
+    display: block;
+}
+
+.alert.hide{
+    animation: hide_slide 1s ease forwards;
+}
+
+@keyframes show_slide {
+    0% {
+        transform: translateX(100%);
+    }
+    40% {
+        transform: translateX(-10%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes hide_slide {
+    0% {
+        transform: translateX(-10px);
+    }
+    40% {
+        transform: translateX(0%);
+    }
+    80% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }

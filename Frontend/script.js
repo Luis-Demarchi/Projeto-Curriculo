@@ -67,23 +67,46 @@ window.onload = function () {
     document.getElementById("imageModal").style.display = "none";
 };
 
-document.getElementById('contactForm').addEventListener("submit", async function (e){
-    e.preventDefault();
+window.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('contactForm').addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-    const formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("name").value,
-        message: document.getElementById("message").value
-    }
+        const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        }
 
-    const response = await fetch("http://localhost:3000/send",{
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
+        try {
+            const response = await fetch("http://localhost:3000/send", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (response.status === 200) {
+                showAlert("success", result.message);
+            } else {
+                showAlert("error", result.message);
+            }
+        } catch (error) {
+            showAlert("error", "An error occurred.");
+        }
+    
+        function showAlert(type, message) {
+            const alert = document.querySelector(`.alert.${type}`);
+            const alertMessage = alert.querySelector('.alertMessage');
+            alertMessage.innerHTML = message;
+            alert.classList.add('show');
+            alert.classList.remove('hide')
+
+            setTimeout(() => {
+                alert.classList.add('hide');
+            }, 3000);
+        }
     });
-
-    const result = await response.json();
-    alert(result.message);
-})
+});
