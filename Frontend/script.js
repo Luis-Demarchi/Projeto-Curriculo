@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         try {
-            const response = await fetch("http://localhost:3000/send", {
+            const response = await fetch("https://luisdemarchi.dev.br/send", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

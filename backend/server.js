@@ -3,6 +3,7 @@ const mysql = require("mysql2");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
+const path = require('path');
 require("dotenv").config();
 
 const app = express();
@@ -33,6 +34,12 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+app.use(express.static(path.join(__dirname, '../Frontend')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Frontend', 'index.html'));
+});
+
 app.post("/send", (req, res) => {
     const { name, email, message } = req.body;
 
@@ -59,4 +66,6 @@ app.post("/send", (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log("Server is running on port 3000"));
+app.listen(3000, '0.0.0.0', () => {
+    console.log("Servidor rodando na porta 3000");
+});
